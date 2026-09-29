@@ -130,11 +130,11 @@ $("toMemories").addEventListener("click", () => showPage(4));
 
 /* Page 4 memories */
 const memories = [
-  ["assets/photos/memory-1.jpeg", "A moment that became a memory. 💙"],
+  ["assets/photos/memory-1.jpeg", "A moment that can be a first single in my Galary. 💙"],
   ["assets/photos/memory-2.jpeg", "Some memories never need a reason. ✨"],
-  ["assets/photos/memory-3.jpeg", "Crazy moments, genuine smiles. 😄"],
-  ["assets/photos/memory-4.jpeg", "Different days, same beautiful friendship. 🌤️"],
-  ["assets/photos/memory-5.jpeg", "Some people simply make life brighter. 💙"]
+  ["assets/photos/memory-3.jpeg", "I dont know WY we went to beach on that day, But its beautiful. 😄"],
+  ["assets/photos/memory-4.jpeg", "Helmet Enduku Dobbesavo telidu. 🌤️"],
+  ["assets/photos/memory-5.jpeg", "Chi chi, evariko Flower icchesukonii Thu Thu Thu. 💙"]
 ];
 let memoryIndex = 0;
 $("memoryTotal").textContent = memories.length;
