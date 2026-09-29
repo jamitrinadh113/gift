@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Pottiiiiiii 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/birthday-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="sky-overlay"></div>
+  <div class="love-scene" aria-hidden="true">
+    <span class="float-heart heart-1">♥</span>
+    <span class="float-heart heart-2">♥</span>
+    <span class="float-heart heart-3">♥</span>
+    <span class="float-heart heart-4">♥</span>
+    <span class="float-heart heart-5">♥</span>
+    <span class="float-heart heart-6">♥</span>
+  </div>
+  <div id="particles"></div>
+
+  <button id="musicBtn" class="music-btn" aria-label="Toggle music">♫ Mine</button>
+  <audio id="music" loop>
+    <source src="assets/music/Dude - Oorum Blood Bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+      <div class="glass hero-card">
+        <div class="eyebrow">A little surprise made with friendship 💙</div>
+        <h1>Its Your Birthday!</h1>
+        <div class="cake-mini">🎂</div>
+        <p class="lead">Today is all about celebrating <strong>you</strong>, the memories we share from Last 2 Years, and all the beautiful moments still waiting for us.</p>
+        <h2>Are You Excited for What's Next? ✨</h2>
+        <div class="choices">
+          <button class="btn primary" id="yesBtn">YES! ✨</button>
+          <button class="btn ghost" id="noBtn">NO 😄</button>
+        </div>
+        <p id="noMessage" class="tiny-message"></p>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+      <div class="glass">
+        <div class="eyebrow">Chapter 02 · Make a Wish</div>
+        <h2>Make a Wish… ✨</h2>
+        <p class="subtitle">Click every candle and discover the message hidden in them.</p>
+        <div class="cake">
+          <div class="candles">
+            <button class="candle" data-word="You"><span class="flame">🔥</span><span class="wick"></span></button>
+            <button class="candle" data-word="Are"><span class="flame">🔥</span><span class="wick"></span></button>
+            <button class="candle" data-word="So"><span class="flame">🔥</span><span class="wick"></span></button>
+            <button class="candle" data-word="Special"><span class="flame">🔥</span><span class="wick"></span></button>
+            <button class="candle" data-word="To Me"><span class="flame">🔥</span><span class="wick"></span></button>
+          </div>
+          <div class="cake-top"></div>
+          <div class="cake-body"><span>💙</span></div>
+          <div class="plate"></div>
+        </div>
+        <div id="wishWords" class="word-display"></div>
+        <p id="candleHint" class="hint">5 candles are waiting…</p>
+        <button class="btn primary hidden" id="toGame">Continue →</button>
+      </div>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+      <div class="glass game-card">
+        <div class="eyebrow">Chapter 03 · its time for Challenge</div>
+        <h2>Catch the Birthday Stars! ⭐</h2>
+        <p class="subtitle">Catch 10 stars before the timer runs out.</p>
+        <div class="game-stats">
+          <span>Score: <b id="score">0</b>/10</span>
+          <span>Time: <b id="time">20</b>s</span>
+        </div>
+        <div id="gameArea" class="game-area">
+          <div class="game-start" id="gameStart">
+            <span>⭐</span>
+            <button class="btn primary" id="startGame">Start Game</button>
+          </div>
+        </div>
+        <div id="winBox" class="win-box hidden">
+          <div class="confetti-burst">🎉</div>
+          <h2>CONGRATULATIONS! 🎉</h2>
+          <p>You won the my challenge that Made For Uhhhhh!</p>
+          <div class="bouquet">💐</div>
+          <p><strong>As a being my friend Youuu deserves something special. 💙</strong></p>
+          <button class="btn primary" id="toMemories">See Our Memories →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4 -->
+    <section class="page" id="page4">
+      <div class="glass memory-card">
+        <div class="eyebrow">Chapter 04 · Our Memories</div>
+        <h2>Some Memories Are Too Special to Forget… 💙</h2>
+        <div class="memory-frame">
+          <img id="memoryImage" src="assets/photos/memory-1.jpeg" alt="Our memory">
+          <div class="memory-shine"></div>
+        </div>
+        <div class="memory-count"><span id="memoryNumber">1</span> / <span id="memoryTotal">5</span></div>
+        <p id="memoryCaption" class="caption">A moment that became a memory.</p>
+        <button class="btn primary" id="nextMemory">Next Memory →</button>
+        <div id="memoryEnd" class="hidden">
+          <p class="final-memory">And there is still one last surprise… 🎁</p>
+          <button class="btn primary" id="toFinal">Open the Final Surprise →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="page" id="page5">
+      <div class="glass final-card">
+        <div id="envelopeWrap">
+          <div class="eyebrow">The Final Surprise</div>
+          <h2>One Last Surprise… 💌</h2>
+          <p class="subtitle">Open the message when you're ready.</p>
+          <button class="envelope" id="envelope" aria-label="Open birthday message">
+            <span class="envelope-flap"></span>
+            <span class="envelope-heart">💙</span>
+          </button>
+          <p class="hint">Click the envelope</p>
+        </div>
+
+        <div id="letter" class="letter hidden">
+          <div class="letter-icon">🎂</div>
+          <h2>Happy Birthday, POTTIIIIIIIIII 💙</h2>
+          <p>Happy Birthday to the person who knows the truest version of me and has stayed by my side through every single chapter. Writing this to you isn't just about celebrating the day you were born; it’s about expressing my deepest gratitude for the immense impact you have on my life. Finding a best friend is rare, but finding a soul-sibling—someone whose mind, humor, and values align so perfectly with mine—is a once-in-a-lifetime gift. You are my anchor when things get chaotic, my loudest cheerleader when I succeed, and the person who can make me laugh until it hurts, even on my darkest days.</p>
+          <p>When I look back at the tapestry of my life, the brightest threads are the ones woven with you. Whenever I think about the heart of our friendship, my mind always goes back to that day we spent at the beach right after college. There was this incredible sense of freedom, sitting by the water, talking about the future, and just processing the end of one massive chapter while standing on the edge of the next. In that moment, watching the waves, I realized that no matter how much our lives, locations, or circumstances changed, the bond we shared was permanent. That day captured the absolute essence of us: unfiltered conversations, endless laughs, and a peaceful certainty that we could take on whatever came next, as long as we had each other's backs. It was a quiet afternoon, yet the weight of it shaped everything. Amidst all the uncertainty of growing up, leaving the safety of college, and stepping onto unknown paths, I knew I would never be truly lost because I had a friendship that could weather any storm.</p>
+          <p>As you step into this new year of your life, I want you to look in the mirror and truly see the incredible human being you are. Your empathy is boundless, your resilience is inspiring, and the sheer warmth you bring into every room you enter is unmatched. I hope you know how deeply you are valued, not just by me, but by everyone lucky enough to cross your path. I pray that this year grants you the courage to chase your wildest ambitions, the peace to let go of what doesn't serve you, and the boundless joy you so selflessly give to others. Thank you for the unwavering loyalty that defines our bond—it remains one of the greatest pillars of my life.</p>
+          <p>Thank you for the countless late-night conversations, the unspoken understanding, and the unwavering loyalty that defines our bond. Our friendship is one of the pillars of my life, a safe harbor built on absolute trust and mutual respect. No matter where the future takes us or how much the world changes around us, my promise to you is that I will always be in your corner. Happy Birthday to my closest confidant, my partner in crime, and my absolute best friend. May this year be your most beautiful journey yet.</p>
+          <div class="divider">✦ ✦ ✦</div>
+          <h3>🎉 HAPPY BIRTHDAY, BEST FRIEND! 🎉</h3>
+          <p class="signature">Keep smiling.<br>Keep shining.<br>Keep being the amazing person you are. 💙</p>
+          <p><strong>Here's to our friendship and all the memories still waiting to be made! ✨</strong></p>
+          <div class="bff-badge">BFF 💙</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
