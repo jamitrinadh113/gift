@@ -1,6 +1,28 @@
 const pages = [...document.querySelectorAll(".page")];
 const $ = (id) => document.getElementById(id);
+const unlockDateTime = "2026-10-01T00:00:00";
+const unlockAt = new Date(unlockDateTime).getTime();
+let countdownTimer;
 
+function updateCountdown() {
+  const remaining = Math.max(0, unlockAt - Date.now());
+  const totalSeconds = Math.floor(remaining / 1000);
+  $("countdownDays").textContent = Math.floor(totalSeconds / 86400);
+  $("countdownHours").textContent = String(Math.floor((totalSeconds % 86400) / 3600)).padStart(2, "0");
+  $("countdownMinutes").textContent = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
+  $("countdownSeconds").textContent = String(totalSeconds % 60).padStart(2, "0");
+
+  if (remaining === 0) {
+    clearInterval(countdownTimer);
+    document.body.classList.remove("is-locked");
+    $("countdownGate").remove();
+  }
+}
+
+updateCountdown();
+if (document.body.classList.contains("is-locked")) {
+  countdownTimer = setInterval(updateCountdown, 1000);
+}
 function showPage(n) {
   pages.forEach((p, i) => p.classList.toggle("active", i === n - 1));
   window.scrollTo({ top: 0, behavior: "smooth" });
