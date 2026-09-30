@@ -9,7 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="is-locked">
+  <section id="countdownGate" class="countdown-gate" aria-label="Birthday surprise countdown">
+    <div class="countdown-card">
+      <div class="eyebrow">A birthday surprise is waiting</div>
+      <h1>Almost time! ✨</h1>
+      <p class="countdown-intro">Your surprise opens October 1, 2026 at 12:00 AM, your local time.</p>
+      <div class="countdown" role="timer" aria-live="off" aria-label="Time remaining">
+        <div class="countdown-unit"><span id="countdownDays">0</span><small>Days</small></div>
+        <div class="countdown-unit"><span id="countdownHours">00</span><small>Hours</small></div>
+        <div class="countdown-unit"><span id="countdownMinutes">00</span><small>Minutes</small></div>
+        <div class="countdown-unit"><span id="countdownSeconds">00</span><small>Seconds</small></div>
+      </div>
+      <p class="countdown-note">This page will open automatically when the countdown ends.</p>
+    </div>
+  </section>
   <div class="video-bg">
     <video autoplay muted loop playsinline>
       <source src="assets/video/birthday-bg.mp4" type="video/mp4">
