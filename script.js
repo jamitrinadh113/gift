@@ -154,9 +154,9 @@ $("toMemories").addEventListener("click", () => showPage(4));
 const memories = [
   ["assets/photos/1.jpeg", "A moment that can be a first single in my Galary. 💙"],
   ["assets/photos/2.jpeg", "We had very less moments in our journey to celebrate but definately this is the one. ✨"],
-  ["assets/photos/3.jpeg", "I dont know Why we went to beach on that day, But its beautiful. 😄"],
-  ["assets/photos/4.jpeg", "Helmet Enduku Dobbesavo telidu. 🌤️"],
-  ["assets/photos/5.jpeg", "Chi chi, evariko Flower icchesukonii Thu Thu Thu. 💙"]
+  ["assets/photos/3.jpeg", "this is the coolest and simplest one and my one and only one. 😄"],
+  ["assets/photos/4.jpeg", "that boat ride feels me soo special till now. 🌤️"],
+  ["assets/photos/5.jpeg", ". 💙"]
 ];
 let memoryIndex = 0;
 $("memoryTotal").textContent = memories.length;
