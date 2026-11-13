@@ -156,7 +156,7 @@ const memories = [
   ["assets/photos/2.jpeg", "We had very less moments in our journey to celebrate but definately this is the one. ✨"],
   ["assets/photos/3.jpeg", "this is the coolest and simplest one and my one and only one. 😄"],
   ["assets/photos/4.jpeg", "that boat ride feels me soo special till now. 🌤️"],
-  ["assets/photos/5.jpeg", ". 💙"]
+  ["assets/photos/5.jpeg", "my first gift. 💙"]
 ];
 let memoryIndex = 0;
 $("memoryTotal").textContent = memories.length;
